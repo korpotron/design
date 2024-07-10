@@ -4,6 +4,9 @@ import PackageDescription
 
 let package = Package(
     name: "Design",
+    platforms: [
+        .iOS(.v16),
+    ],
     products: [
         .library(
             name: "Design",
@@ -14,7 +17,10 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Design"
+            name: "Design",
+            resources: [
+                .process("Resources")
+            ]
         ),
         .testTarget(
             name: "DesignTests",
